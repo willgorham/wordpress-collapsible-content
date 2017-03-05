@@ -1,0 +1,2 @@
+<?php
+// it's quiet
