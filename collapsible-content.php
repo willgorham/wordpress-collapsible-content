@@ -33,7 +33,24 @@
  * You should have received a copy of the GNU General Public License
  * along with Collapsible Content. If not, see <http://www.gnu.org/licenses/>.
  */
-
 namespace RitualWeb\CollapsibleContent;
 
-include( 'start.php' );
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+
+/**
+ * Define constants
+ */
+define( 'COLLAPSIBLE_CONTENT_PLUGIN', __FILE__ );
+define( 'COLLAPSIBLE_CONTENT_DIR', plugin_dir_path( __FILE__ ) );
+$plugin_url = plugin_dir_url( __FILE__ );
+if ( is_ssl() ) {
+  $plugin_url = str_replace( 'http://', 'https://', $plugin_url );
+}
+define( 'COLLAPSIBLE_CONTENT_URL', $plugin_url );
+define( 'COLLAPSIBLE_CONTENT_TEXT_DOMAIN', 'collapsible-content' );
+
+/**
+ * Start this thing up
+ */
+include( __DIR__ . '/src/start.php' );

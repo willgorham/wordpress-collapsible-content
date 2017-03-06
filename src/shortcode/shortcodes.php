@@ -40,7 +40,8 @@ function process_shortcode( $user_defined_attributes, $content, $shortcode_name 
   );
 
   // do the processing
-  $attributes['show_icon'] = esc_attr( $attributes['show_icon'] );
+  $attributes['closed_icon'] = esc_attr( $attributes['closed_icon'] );
+  $attributes['opened_icon'] = esc_attr( $attributes['opened_icon'] );
   if ( $content ) {
     $content = do_shortcode( $content );
   }
@@ -71,16 +72,16 @@ function get_shortcode_configuration( $shortcode_name ) {
 
     $config['defaults'] = array(
       'question' => '',
-      'hide_icon' => 'dashicons dashicons-arrow-up-alt2',
-      'show_icon' => 'dashicons dashicons-arrow-down-alt2',
+      'opened_icon' => 'dashicons dashicons-arrow-up-alt2',
+      'closed_icon' => 'dashicons dashicons-arrow-down-alt2',
     );
 
   } elseif ( $shortcode_name == 'teaser' ) {
 
     $config['defaults'] = array(
       'visible_message' => '',
-      'hide_icon' => 'dashicons dashicons-arrow-up-alt2',
-      'show_icon' => 'dashicons dashicons-arrow-down-alt2',
+      'opened_icon' => 'dashicons dashicons-arrow-up-alt2',
+      'closed_icon' => 'dashicons dashicons-arrow-down-alt2',
     );
 
   }
