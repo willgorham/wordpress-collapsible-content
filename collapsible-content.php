@@ -5,7 +5,7 @@
  * @package   RitualWeb\CollapsibleContent
  * @author    Will Gorham
  * @copyright 2017 Will Gorham
- * @license   GPL-2.0+
+ * @license   GPL-3.0+
  *
  * @wordpress-plugin
  * Plugin Name:  Collapsible Content
